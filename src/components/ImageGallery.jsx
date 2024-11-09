@@ -9,9 +9,9 @@ const ImageGallery = ({ images, loading, openModal }) => {
   return (
     <ul style={{ listStyle: 'none', display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
       {images.map((image) => (
-        <li key={image.id} onClick={() => openModal(image)} style={{ cursor: 'pointer' }}>
+        <li key={image.id} style={{ cursor: 'pointer' }}>
           <div>
-            <img src={image.urls.small} alt={image.alt_description} />
+            <img onClick={() => openModal(image)} src={image.urls.small} alt={image.alt_description} />
           </div>
         </li>
       ))}
