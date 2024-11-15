@@ -1,0 +1,24 @@
+.searchForm{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+.imageCard{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    justify-content: center;
+
+}
+
+.imageCardAlt{
+    max-width: 100%;
+}
+.image {
+    width: 200px; /* Görsellerin genişliğini sabitler */
+    height: 200px; /* Görsellerin yüksekliğini sabitler */
+    object-fit: cover; /* Görselleri kutuya sığacak şekilde kırpar */
+  }

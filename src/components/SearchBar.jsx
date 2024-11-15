@@ -1,14 +1,15 @@
 import propTypes from 'prop-types';
+import style from '../App.module.css';
 
 const SearchBar = ({ query, setQuery, handleSearch }) => (
-  <form onSubmit={handleSearch}>
+  <form onSubmit={handleSearch} className={style.searchForm}>
     <input
       type="text"
       value={query}
       onChange={(e) => setQuery(e.target.value)}
       placeholder="Search for images..."
     />
-    <button type="submit">Search</button>
+    <button className={style.button} type="submit">Search</button>
   </form>
 );
 

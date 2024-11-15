@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 import Loader from './Loader.jsx';
+import style from '../App.module.css';
+
 
 const ImageGallery = ({ images, loading, openModal }) => {
   if (loading) {
@@ -7,11 +9,11 @@ const ImageGallery = ({ images, loading, openModal }) => {
   }
 
   return (
-    <ul style={{ listStyle: 'none', display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+    <ul className={style.imageCard}  >
       {images.map((image) => (
-        <li key={image.id} style={{ cursor: 'pointer' }}>
+        <li className={style.imageCardAlt} key={image.id} style={{ cursor: 'pointer' }}>
           <div>
-            <img onClick={() => openModal(image)} src={image.urls.small} alt={image.alt_description} />
+            <img className={style.image} onClick={() => openModal(image)} src={image.urls.small} alt={image.alt_description} />
           </div>
         </li>
       ))}
