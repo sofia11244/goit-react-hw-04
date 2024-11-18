@@ -37,7 +37,7 @@ function App() {
 
   useEffect(() => {
     if (searchTerm) {
-      setImages([]);
+      // setImages([]); eğer sayfanın yeniden yüklenmesini istiyorsan ancak gerek yok burad hata vardı
       fetchImages(searchTerm, page); 
     }
   }, [searchTerm, page]); // tetkleme
